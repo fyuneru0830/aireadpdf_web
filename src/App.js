@@ -36,6 +36,7 @@ function App() {
         updateStatus(file.task_id, 'waiting AI response');
         try {
           const result = await sendAiRequest(file.task_id, systemPrompt, userPrompt);
+
         } catch (error) {
           console.error('AI 请求失败:', error);
           updateStatus(file.task_id, 'AI response failed');
