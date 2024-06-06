@@ -1,0 +1,20 @@
+.App {
+  display: flex;
+}
+
+.left-panel, .center-panel, .right-panel {
+  flex: 1;
+  padding: 10px;
+}
+
+.left-panel {
+  background-color: #f0f0f0;
+}
+
+.center-panel {
+  background-color: #ffffff;
+}
+
+.right-panel {
+  background-color: #f9f9f9;
+}
