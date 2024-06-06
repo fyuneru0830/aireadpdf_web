@@ -55,7 +55,9 @@ const MultipleFilesUpload = ({ onUploadComplete, onHide }) => {
       }
     }
     onUploadComplete(uploadedFiles);
-    onHide(); // 隐藏组件
+    onHide()
+
+    ; // 隐藏组件
   };
 
   const handleClear = () => {
