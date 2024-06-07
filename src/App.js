@@ -62,7 +62,7 @@ function App() {
   const handlePromptSubmit = async (systemPrompt, userPrompt) => {
     setShowFileList(true);
     setShowPromptInput(false);
-    for (const file of uploadedFiles) {
+    const promises = uploadedFiles.map(async (file) => {
       if (file.status === 'convert to image success') {
         updateStatus(file.task_id, 'waiting AI response');
         try {
@@ -73,7 +73,8 @@ function App() {
           updateStatus(file.task_id, 'AI response failed');
         }
       }
-    }
+    });
+    await Promise.all(promises);
   };
 
   const handleExport = async () => {
@@ -87,8 +88,6 @@ function App() {
   };
 
   return (
-
-
     <div className="App">
       <h1>文件上传</h1>
       {showUpload && (
