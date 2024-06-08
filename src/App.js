@@ -35,7 +35,9 @@ function App() {
       if (file.status === 'convert to image success') {
         updateStatus(file.task_id, 'waiting AI response');
         try {
+          console.log(file.task_id, systemPrompt, userPrompt);
           const result = await sendAiRequest(file.task_id, systemPrompt, userPrompt);
+          console.log(result);
 
         } catch (error) {
           console.error('AI 请求失败:', error);
