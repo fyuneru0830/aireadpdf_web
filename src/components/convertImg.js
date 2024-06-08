@@ -10,11 +10,11 @@ const convertImg = async (taskId, updateStatus) => {
     if (result.status === 'success') {
       updateStatus(taskId, 'convert to image success');
     } else {
-      updateStatus(taskId, 'convert to image failed');
+      //updateStatus(taskId, 'convert to image failed');
     }
   } catch (error) {
     console.error('转换失败:', error);
-    updateStatus(taskId, 'convert to image failed');
+    // updateStatus(taskId, 'convert to image failed');
   }
 };
 

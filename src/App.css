@@ -1,6 +1,4 @@
-.App {
-  display: flex;
-}
+
 
 .left-panel, .center-panel, .right-panel {
   flex: 1;
