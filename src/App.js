@@ -90,7 +90,7 @@ function App() {
 
 
     <div className="App">
-      <h1>文件上传</h1>
+      <h1>AI read PDF</h1>
       {showUpload && (
         <MultipleFilesUpload
           onUploadComplete={handleUploadComplete}
