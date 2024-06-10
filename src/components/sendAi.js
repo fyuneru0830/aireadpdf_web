@@ -1,6 +1,6 @@
 export const sendAiRequest = async (taskId, systemPrompt, userPrompt) => {
   try {
-    const response = await fetch('http://${window.location.hostname}:3000/convert_txt', {
+    const response = await fetch('http://210.239.67.21:3000/convert_txt', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
