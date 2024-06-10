@@ -1,6 +1,6 @@
 export const exportExcel = async (taskId, fileName) => {
     try {
-      const response = await fetch(`http://localhost:3000/export?id=${taskId}`);
+      const response = await fetch(`http://${window.location.hostname}:3000/export?id=${taskId}`);
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }

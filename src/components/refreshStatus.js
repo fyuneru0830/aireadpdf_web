@@ -1,6 +1,6 @@
 export const refreshStatus = async (taskId) => {
     try {
-      const response = await fetch(`http://localhost:3000/result?id=${taskId}`);
+      const response = await fetch(`http://${window.location.hostname}:3000/result?id=${taskId}`);
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }

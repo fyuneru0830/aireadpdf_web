@@ -4,7 +4,7 @@ const convertImg = async (taskId, updateStatus) => {
   console.log('开始转换');
   updateStatus(taskId, 'converting image');
   try {
-    const response = await fetch(`http://localhost:3000/convert_img?id=${taskId}`);
+    const response = await fetch(`http://${window.location.hostname}:3000/convert_img?id=${taskId}`);
     const result = await response.json();
 
     if (result.status === 'success') {

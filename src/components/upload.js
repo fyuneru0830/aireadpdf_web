@@ -31,7 +31,7 @@ const MultipleFilesUpload = ({ onUploadComplete, onHide }) => {
       uploadedFiles.push({ file_name: file.name, status: 'uploading', task_id: null });
 
       try {
-        const response = await fetch('http://localhost:3000/upload', {
+        const response = await fetch('http://${window.location.hostname}:3000/upload', {
           method: 'POST',
           body: formData,
         });
